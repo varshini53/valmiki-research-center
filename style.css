@@ -2631,3 +2631,30 @@ h2.section-heading::after {
     font-size: 1.6rem !important;
   }
 }
+/* ======================================
+   DRAWER CLOSE BUTTON – TOP RIGHT FIX
+====================================== */
+
+.drawer-panel {
+  position: relative; /* 🔑 anchor for absolute close button */
+}
+
+/* Close (X) button */
+.drawer-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  color: #222;
+  z-index: 10;
+}
+
+/* Optional hover polish */
+.drawer-close:hover {
+  color: #ff8c1a;
+}
