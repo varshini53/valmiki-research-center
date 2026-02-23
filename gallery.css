@@ -1,0 +1,120 @@
+/* ================================
+   GALLERY SECTION – FINAL CLEAN
+================================ */
+.gallery-section {
+  padding: 32px 6% 50px;   /* slightly tighter top */
+  text-align: center;
+}
+
+/* ================================
+   GALLERY HEADING (ZERO GAP)
+================================ */
+.section-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 600;
+
+  margin: 0;              /* 🔑 remove default h2 margin */
+  padding: 0;
+  line-height: 1.15;      /* 🔑 reduces hidden vertical space */
+
+  position: relative;
+}
+
+/* Orange underline */
+.section-heading::after {
+  content: "";
+  display: block;
+
+  width: 70px;
+  height: 4px;
+  background: #ff8c1a;
+
+  margin: 6px auto 4px;   /* 🔑 ultra-tight underline spacing */
+  border-radius: 2px;
+}
+
+/* ================================
+   PARAGRAPH – DIRECTLY AFTER TITLE
+================================ */
+.gallery-intro {
+  margin: 0 auto 20px;    /* 🔑 ZERO top margin */
+  padding: 0;
+
+  max-width: 720px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ================================
+   EVENT BUTTONS
+================================ */
+.gallery-events {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  margin-top: 6px;        /* 🔑 keeps buttons close */
+  margin-bottom: 30px;
+}
+
+.event-btn {
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: 2px solid #ff8c1a;
+  background: transparent;
+  color: #ff8c1a;
+
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.event-btn.active,
+.event-btn:hover {
+  background: #ff8c1a;
+  color: #ffffff;
+}
+
+/* ================================
+   PHOTO GRID
+================================ */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  margin-top: 8px;
+}
+
+.photo-grid img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 22px 50px rgba(0,0,0,0.16);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 34px;
+  }
+
+  .gallery-section {
+    padding: 26px 5% 40px;
+  }
+
+  .gallery-intro {
+    font-size: 15.5px;
+  }
+}

@@ -1,0 +1,2584 @@
+/* ================================
+   GLOBAL RESET
+================================ */
+/* FORCE REMOVE DEFAULT LINK BLUE */
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fb;
+  color: #333;
+}
+
+/* ================================
+   TOP BAR
+================================ */
+/* ================================
+   TOP BAR – CONTACT + SOCIAL ICONS
+================================ */
+.top-bar {
+  background: #ff8c1a;
+  color: #fff;
+  padding: 8px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Left side (phone + email) */
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.top-left span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Right side (social icons) */
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.top-right a {
+  color: #fff;
+  font-size: 15px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.top-right a:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+ @media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 4%;
+    text-align: center;
+  }
+
+  .top-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+  }
+
+  .top-left span {
+    justify-content: center;
+  }
+
+  .top-right {
+    gap: 14px;
+  }
+
+  .top-right a {
+    font-size: 14px;
+  }
+}
+
+/* ================================
+   NAVBAR – TWO LOGOS + FULL MENU
+================================ */
+.navbar {
+  background: #ffffff;
+  padding: 10px 6%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* ================================
+   LOGOS
+================================ */
+
+/* Left logo */
+/* ================================
+   LOGOS – BIGGER & CONTROLLED
+================================ */
+
+/* Left logo */
+.left-logo img {
+  height: 65px;          /* keep height safe */
+  width: 150px;          /* ⬅️ increase width */
+  object-fit: contain;
+}
+
+/* Center logo */
+.center-logo img {
+  height: 60px;
+  width: 180px;          /* ⬅️ bigger center logo */
+  object-fit: contain;
+}
+
+/* Center logo */
+.center-logo {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* ================================
+   NAVIGATION LINKS
+================================ */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #222;
+  font-size: 14.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline hover animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #ff8c1a;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff8c1a;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+.hero {
+  height: 90vh;
+  background: url("hero.png") center / cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.4)
+  );
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  max-width: 850px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+/* ================================
+   HERO BUTTONS – FLAT & CLEAN
+================================ */
+.btn {
+  padding: 12px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #ff8c1a;
+  background: transparent;
+  color: #ffffff;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* ACTIVE BUTTON (SOLID ORANGE, NO SHINE) */
+.btn.active {
+  background: #ff8c1a;
+  color: #ffffff;
+}
+
+/* INACTIVE BUTTON (PLAIN) */
+.btn:not(.active) {
+  background: transparent;
+}
+
+/* OPTIONAL: very subtle hover (still flat) */
+.btn:not(.active):hover {
+  background: rgba(255, 140, 26, 0.12);
+}
+
+
+
+
+/* ================================
+   SECTION HEADING
+================================ */
+.section-heading {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+/* ================================
+   ABOUT SECTION – PREMIUM VERSION
+================================ */
+.about-section {
+  background: linear-gradient(to bottom, #ffffff, #f9fafb);
+  padding: 50px 6% 40px;
+   margin-bottom: 10px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr; /* image smaller, text bigger */
+  gap: 50px;
+  align-items: center;
+}
+
+
+/* IMAGE CARD */
+.about-image img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.18);
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.02);
+}
+
+/* TEXT CARD */
+/* ABOUT TEXT – NO BOX / NO CARD */
+.about-text {
+  background: transparent;
+  padding: 0;                 /* remove inner padding */
+  border-radius: 0;
+  box-shadow: none;
+}
+
+
+/* ABOUT TEXT – PREMIUM ALIGNMENT */
+.about-text p {
+  font-size: 15.8px;
+  line-height: 1.95;
+  color: #444;
+
+  text-align: justify;
+  text-justify: inter-word;
+  max-width: 640px;
+}
+@media (max-width: 768px) {
+  .about-text p {
+    text-align: left;
+  }
+}
+
+
+/* KNOW MORE BUTTON (PREMIUM) */
+.about-text .btn {
+  margin-top: 10px;
+  padding: 12px 34px;
+  font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 420px;
+  }
+}
+
+
+/* CENTER KNOW MORE BUTTON */
+.about-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text .btn {
+  align-self: center;   /* 🔑 centers the button */
+  margin-top: 22px;
+}
+
+/* ================================
+   COURSES SECTION
+================================ */
+.courses-section {
+  padding: 80px 6%;
+  background: #f9f9f9;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.course-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  border-left: 5px solid #ff8c1a;
+  transition: all 0.3s ease;
+}
+
+.course-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.course-btn {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff8c1a;
+  text-decoration: none;
+}
+
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 1100px) {
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    grid-template-columns: auto auto;
+    row-gap: 10px;
+  }
+  /* Navbar layout fix */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 6%;
+  }
+
+  /* Logo group */
+  .left-logo,
+  .center-logo {
+    display: flex !important;
+    align-items: center;
+  }
+
+  /* Keep logos side-by-side */
+  .left-logo {
+    gap: 10px;
+  }
+
+  .center-logo {
+    margin-left: 10px;
+  }
+
+  /* Resize logos for mobile */
+  .left-logo img {
+    height: 45px;
+    width: auto;
+  }
+
+  .center-logo img {
+    height: 42px;
+    width: auto;
+  }
+
+
+  .nav-links {
+    grid-column: span 2;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+}
+/* =================================================
+   TOP BAR – CLEAN OVERRIDES (NO LINES / NO UNDERLINE)
+================================================= */
+
+/* Remove underline & pseudo-elements from top bar links */
+.top-bar a {
+  text-decoration: none !important;
+}
+
+/* Kill inherited ::after underline effects */
+.top-bar a::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Keep hover professional (no lines, no borders) */
+.top-bar a:hover {
+  text-decoration: none !important;
+  opacity: 0.85;
+  transform: none;
+}
+
+/* Ensure icons & text stay aligned cleanly */
+.top-bar i {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Optional: slightly tighter professional spacing */
+.top-bar {
+  letter-spacing: 0.2px;
+}
+
+.about-text p {
+  font-size: 15.8px;
+  line-height: 1.9;
+  color: #444;
+}
+
+.about-text strong {
+  color: #222;
+  font-weight: 600;
+}
+ /* ================================
+   PREMIUM FOOTER
+================================ */
+.premium-footer {
+  background: radial-gradient(circle at top, #111, #000 70%);
+  color: #d0d0d0;
+  padding: 80px 6% 0;
+}
+
+/* Layout */
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* BRAND */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.footer-brand img {
+  width: 70px;
+  height: auto;
+}
+
+.footer-brand h3 {
+  font-size: 26px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ABOUT TEXT */
+.footer-about p {
+  font-size: 14.8px;
+  line-height: 1.9;
+  color: #bdbdbd;
+  max-width: 560px;
+}
+
+/* SOCIAL ICONS */
+.footer-socials {
+  display: flex;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.footer-socials a {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: #ff8c1a;
+  transform: translateY(-3px);
+}
+
+/* CONTACT */
+.footer-contact h4 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.footer-contact h4::after {
+  content: "";
+  width: 46px;
+  height: 3px;
+  background: #ff8c1a;
+  display: block;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+.footer-contact ul {
+  list-style: none;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  color: #cfcfcf;
+}
+
+.footer-contact i {
+  color: #ff8c1a;
+  font-size: 16px;
+}
+
+/* DIRECTION BUTTON */
+.footer-direction-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  background: transparent;
+  border: 2px solid #ff8c1a;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.footer-direction-btn:hover {
+  background: #ff8c1a;
+  color: #000;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  margin-top: 70px;
+  padding: 22px 0;
+  text-align: center;
+  font-size: 13.5px;
+  color: #9a9a9a;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-contact h4::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-direction-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* Reduce gap between About & Courses */
+.about-section {
+  padding-bottom: 40px;   /* was 80px */
+}
+
+.courses-section {
+  padding-top: 40px;      /* was 80px */
+}
+
+
+/* ================================
+   COURSE DETAILS – PREMIUM PAGE
+================================ */
+
+/* ================================
+   COURSE HERO (FIXED & CLEAN)
+================================ */
+.course-hero {
+  height: 60vh;
+
+  background-image: url("hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* 🔑 Rama face fix */
+  background-position: center 22%;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .course-hero {
+    height: 65vh;
+    background-position: center 18%;
+  }
+}
+
+.course-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.course-hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.course-hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.course-hero-content p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+/* ================================
+   COURSE CONTENT
+================================ */
+.course-details {
+  padding: 70px 6%;
+  background: #ffffff;
+}
+
+.course-main {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* LEFT CONTENT */
+.course-info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.course-info p {
+  font-size: 15.8px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 22px;
+}
+
+.course-info h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #222;
+}
+
+.course-info ul {
+  padding-left: 18px;
+}
+
+.course-info li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #555;
+}
+
+/* ================================
+   SIDEBAR
+================================ */
+.course-card {
+  background: #fdf7f2;
+  border-radius: 18px;
+  padding: 30px;
+  border: 1px solid rgba(255, 140, 26, 0.3);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.course-card h4 {
+  margin-bottom: 18px;
+  font-size: 20px;
+  color: #222;
+}
+
+.course-meta p {
+  font-size: 14.5px;
+  margin-bottom: 10px;
+  color: #444;
+}
+ .courses-section {
+  padding: 20px 6% 30px;  /* reduced bottom space */
+}
+
+
+/* ================================
+   APPLY BUTTON (SMALL & CENTERED)
+================================ */
+.apply-btn {
+  display: inline-block;
+  margin: 24px auto 0;
+
+  padding: 12px 34px;
+  background: #ff8c1a;
+  color: #ffffff !important;
+
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: 40px;
+  box-shadow: 0 12px 28px rgba(255, 140, 26, 0.35);
+  transition: all 0.3s ease;
+}
+
+.apply-btn:hover {
+  background: #e67600;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .course-main {
+    grid-template-columns: 1fr;
+  }
+
+  .course-hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+
+/* ================================
+   RESEARCH AREAS TABLE – PREMIUM
+================================ */
+.research-areas {
+   padding: 10px 6% 70px;
+  background: linear-gradient(to bottom, #ffffff, #f9fafb);
+}
+
+.research-areas .section-heading {
+  margin-bottom: 40px;
+}
+
+/* Wrapper for mobile scroll */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 16px;
+}
+
+/* Table */
+.research-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.research-table thead th {
+  background: linear-gradient(135deg, #ff8c1a, #ffb067);
+  color: #ffffff;
+  text-align: left;
+  padding: 18px 20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.research-table thead th span {
+  font-size: 12.5px;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* Body cells */
+.research-table tbody td {
+  padding: 16px 20px;
+  font-size: 14.5px;
+  color: #444;
+  vertical-align: top;
+  border-bottom: 1px solid #eee;
+}
+
+/* Zebra effect */
+.research-table tbody tr:nth-child(even) {
+  background: #fdf7f2;
+}
+
+/* Hover effect */
+.research-table tbody tr:hover {
+  background: rgba(255, 140, 26, 0.08);
+}
+
+/* First column emphasis */
+.research-table tbody td:first-child {
+  font-weight: 500;
+  color: #222;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .research-areas {
+    padding: 60px 5%;
+  }
+
+  .research-table {
+    min-width: 700px;
+  }
+}
+.course-details {
+  padding-bottom: 30px !important; /* was too large */
+  margin-bottom: 0 !important;
+}
+
+/* ================================
+   KNOW MORE – MODERN NAV LINK
+================================ */
+
+.course-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 14px;
+
+  font-size: 14.5px;
+  font-weight: 600;
+
+  color:#ff8c1a;                 /* ⬅️ dark text instead of orange */
+  text-decoration: none;
+
+  position: relative;
+  width: fit-content;
+
+  transition: color 0.3s ease;
+}
+
+/* Arrow */
+.course-btn::after {
+  content: "→";
+  color: #ff8c1a;              /* orange arrow */
+  transition: transform 0.3s ease;
+}
+
+/* Underline */
+.course-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 0%;
+  height: 2px;
+  background: #ff8c1a;
+
+  transition: width 0.3s ease;
+}
+
+/* Hover */
+.course-btn:hover {
+  color: #ff8c1a;              /* text turns orange on hover */
+}
+
+.course-btn:hover::after {
+  transform: translateX(6px);
+}
+
+.course-btn:hover::before {
+  width: 100%;
+}
+
+
+/* ================================
+   PREMIUM CONTACT PAGE
+================================ */
+.contact-premium {
+  padding: 80px 6%;
+  background: #ffffff;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* LEFT */
+.contact-left h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.contact-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 520px;
+  margin-bottom: 35px;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.contact-card i {
+  font-size: 18px;
+  color: #ff8c1a;
+  margin-top: 4px;
+}
+
+.contact-card h4 {
+  font-size: 15px;
+  margin-bottom: 2px;
+  color: #222;
+}
+
+.contact-card p {
+  font-size: 14.5px;
+  color: #555;
+}
+
+/* FORM */
+.contact-form-premium {
+  background: linear-gradient(145deg, #ff9a3c, #ff8c1a);
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 30px 70px rgba(255, 140, 26, 0.35);
+  color: #fff;
+}
+
+.contact-form-premium h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.contact-form-premium input,
+.contact-form-premium select,
+.contact-form-premium textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-form-premium input:focus,
+.contact-form-premium textarea:focus,
+.contact-form-premium select:focus {
+  outline: none;
+}
+
+.contact-form-premium button {
+  width: 100%;
+  padding: 13px;
+  border-radius: 40px;
+  border: none;
+  background: #ffffff;
+  color: #ff8c1a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form-premium button:hover {
+  background: #fff4ea;
+  transform: translateY(-2px);
+}
+
+/* MAP */
+.contact-map iframe {
+  width: 100%;
+  height: 380px;
+  border: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-left h1 {
+    font-size: 34px;
+  }
+}
+contact-premium
+.contact-premium {
+  background-color: #f9fafb;   /* light premium grey */
+}
+/* ================================
+   FOOTER – PROFESSIONAL COMPACT
+================================ */
+
+footer {
+  padding: 28px 6% 18px;   /* ⬅️ major height reduction */
+  background: #0e0e0e;
+}
+
+/* Main footer layout */
+.footer-container {
+  gap: 24px;              /* tighter column spacing */
+  align-items: flex-start;
+}
+
+/* Logo */
+.footer-logo img {
+  width: 52px;            /* slightly smaller logo */
+}
+
+/* Headings */
+footer h3,
+footer h4 {
+  font-size: 16px;
+  margin-bottom: 8px;     /* reduce gap */
+}
+
+/* Paragraph text */
+footer p {
+  font-size: 13.5px;
+  line-height: 1.55;      /* tighter line height */
+  margin-bottom: 6px;
+  color: #cfcfcf;
+}
+
+/* Contact items */
+.footer-contact li {
+  margin-bottom: 6px;
+  font-size: 13.5px;
+}
+
+/* Social icons */
+.footer-socials {
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  width: 34px;
+  height: 34px;
+  font-size: 14px;
+}
+
+/* Button */
+.footer .btn,
+.footer button,
+.footer a.button {
+  padding: 8px 18px;
+  font-size: 13.5px;
+}
+
+/* Bottom copyright bar */
+.footer-bottom {
+  margin-top: 14px;
+  padding-top: 8px;
+  font-size: 12.5px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ================================
+   MOBILE COMPACT
+================================ */
+@media (max-width: 768px) {
+  footer {
+    padding: 24px 6% 16px;
+  }
+
+  .footer-container {
+    gap: 18px;
+    text-align: center;
+  }
+}
+
+
+/* ===========================
+   HEADER + NAV FIX
+=========================== */
+
+.header {
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.top-bar {
+  background: #ff8c1a;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 6%;
+}
+
+.main-nav {
+  display: flex;
+  gap: 26px;
+}
+
+/* RESET BAD DEFAULT LINK STYLES */
+.main-nav a {
+  text-decoration: none !important;
+}
+
+/* NAV LINKS */
+.nav-link {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000 !important;   /* 🔑 force black */
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+
+/* Hover */
+.nav-link:hover {
+  color: #ff8c1a;
+}
+
+/* Underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #ff8c1a;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active page */
+.nav-link.active {
+  color: #ff8c1a;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ======================================
+   NAVBAR FIX – SAME STYLE ON ALL PAGES
+====================================== */
+
+/* Ensure injected navbar matches home */
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #222;
+  font-size: 14.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover color */
+.nav-links a:hover {
+  color: #ff8c1a;
+}
+
+/* Underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #ff8c1a;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Active page */
+.nav-links a.active {
+  color: #ff8c1a;
+  font-weight: 600;
+}
+
+/* FORCE ORANGE KNOW MORE TEXT IN COURSES */
+.courses-section .course-btn {
+  color: #ff8c1a !important;
+}
+
+/* FINAL SAFE OVERRIDES */
+.nav-links a {
+  color: #222 !important;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff8c1a !important;
+}
+
+.course-btn {
+  color: #ff8c1a !important;
+}
+.library-committee {
+  padding-bottom: 20px;
+}
+
+.library-policy-full {
+  padding-top: 20px;
+}
+/* ===============================
+   LIBRARY POLICY – TYPOGRAPHY TUNE
+================================ */
+
+/* Policy content text */
+.library-policy-full .policy-body p {
+  line-height: 1.6;        /* reduced from default */
+  margin-bottom: 8px;      /* tighter spacing */
+  font-size: 15px;
+}
+
+/* Bullet list */
+.library-policy-full .policy-body ul {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 18px;
+}
+
+/* Bullet items */
+.library-policy-full .policy-body li {
+  line-height: 1.6;        /* reduced */
+  margin-bottom: 6px;      /* tighter */
+  font-size: 15px;
+}
+
+/* Policy header height refinement */
+.policy-header {
+  padding: 14px 22px;      /* slightly reduced height */
+  font-size: 15.5px;
+}
+/* ================= GOVERNING COUNCIL ================= */
+.governing-council {
+  padding: 10px;
+  background: #f9fafc;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Intro */
+.gc-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.gc-intro h2 {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.gc-intro p {
+  margin-top: 16px;
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.gc-divider {
+  width: 80px;
+  height: 4px;
+  background: #f7931e;
+  margin: 25px auto 0;
+  border-radius: 2px;
+}
+
+/* Profile */
+.gc-profile {
+  max-width: 1100px;
+  margin: 0 auto 70px;
+  display: flex;
+  gap: 40px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+.gc-profile img {
+  width: 260px;
+  border-radius: 16px;
+}
+
+.gc-profile-content span {
+  color: #f7931e;
+  font-weight: 600;
+}
+
+/* Scroll wrapper */
+.gc-scroll-wrapper {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Horizontal scroll */
+.gc-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 50px 20px;
+}
+
+.gc-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.gc-member-card {
+  min-width: 240px;
+  max-width: 240px;
+  background: #fff;
+  padding: 18px 20px;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+
+.gc-member-card:hover {
+  transform: translateY(-4px);
+}
+
+.gc-member-card h4 {
+  font-size: 16px;
+}
+
+.gc-member-card span {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #f7931e;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Active */
+.gc-member-card.active {
+  border: 2px solid #f7931e;
+  box-shadow: 0 18px 45px rgba(247,147,30,0.35);
+}
+
+/* Arrows */
+.gc-nav {
+  position: absolute;
+  top: 40%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.gc-nav.left {
+  left: -10px;
+}
+
+.gc-nav.right {
+  right: -10px;
+}
+
+/* Dots */
+.gc-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gc-dots span {
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.gc-dots span.active {
+  background: #f7931e;
+  transform: scale(1.2);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .gc-nav {
+    display: none;
+  }
+
+  .gc-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.gc-intro h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 14px;
+}
+
+.gc-intro h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 4px;
+  background: #f7931e;
+  border-radius: 2px;
+}
+.gc-intro {
+  margin-bottom: 45px; /* was 60px */
+}
+/* Fix for h2.section-heading */
+h2.section-heading {
+  font-size: 42px;
+  font-weight: 600;
+  text-align: center;
+  color: #222;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+/* Orange underline */
+h2.section-heading::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #f7931e;
+  margin: 18px auto 0;
+  border-radius: 2px;
+}
+/* Add space above Courses section */
+.courses-section {
+  margin-top: 20px; 
+  margin-bottom: 30px;  /* you can tweak to 50–70px if needed */
+}
+/* ===============================
+   RESPONSIVE NAVBAR
+================================ */
+
+/* Hide toggle on desktop */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #222;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  .navbar {
+    grid-template-columns: auto auto;
+    row-gap: 10px;
+  }
+
+  .nav-toggle {
+    display: block;
+    justify-self: end;
+  }
+
+  .nav-links {
+    grid-column: span 2;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Active (open) state */
+  .nav-links.active {
+    max-height: 400px;
+    opacity: 1;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+}
+/* ===== GALLERY OVERRIDE – FINAL ===== */
+.gallery-section .gallery-intro {
+  margin-top: 0 !important;
+}
+/* ===== GALLERY HEADING SPACING FIX ===== */
+.gallery-section h2.section-heading {
+  margin-bottom: 10px !important;
+}
+/* ================================
+   EVENTS DROPDOWN – FINAL FIX
+================================ */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 140%;
+  right: 0;
+
+  background: #ffffff;
+  min-width: 220px;
+  border-radius: 10px;
+
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+
+  display: none;          /* 🔑 start hidden */
+  z-index: 9999;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;         /* 🔑 show on click */
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 18px;
+  font-size: 14.5px;
+  color: #222;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: #fff4ea;
+  color: #ff8c1a;
+}
+/* ===============================
+   EVENTS DROPDOWN – LINE FIX
+================================ */
+
+/* Remove long underline inside dropdown */
+.dropdown-menu a::after {
+  width: 0 !important;
+  height: 0 !important;
+  content: none !important;
+}
+
+/* Small, premium hover indicator instead */
+.dropdown-menu a {
+  position: relative;
+}
+
+.dropdown-menu a:hover {
+  color: #ff8c1a;
+  background: #fff6ed;
+}
+
+/* Tiny left accent line (premium look) */
+.dropdown-menu a::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 0;
+  background: #ff8c1a;
+  border-radius: 2px;
+  transition: height 0.2s ease;
+}
+
+.dropdown-menu a:hover::before {
+  height: 12px;
+}
+/* ================================
+   HERO SECTION – RESPONSIVE FIX
+================================ */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  background-image: url("hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.35)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0 auto 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero {
+    min-height: 75vh;
+    background-position: center center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 70vh;
+    background-position: center top;
+  }
+
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+}
+/* ================================
+   HERO – MOBILE HEIGHT FIX
+   (PASTE AT END OF CSS)
+================================ */
+.hero {
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero {
+    min-height: 70vh;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 60vh;
+    padding: 80px 0;
+    background-position: center 25%;
+  }
+}
+
+.top-bar {
+  background: #ff8c1a;
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar i {
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+}
+/* ==================================================
+   TOP BAR – MOBILE PIXEL FIX (MATCH REFERENCE)
+================================================== */
+@media (max-width: 768px) {
+
+  .top-bar {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 4px;
+
+    padding: 4px 6px !important;   /* tighter height */
+    font-size: 12px !important;
+    text-align: center;
+  }
+
+  /* ===== FIRST LINE: PHONE + EMAIL (ONE ROW) ===== */
+  .top-phone,
+  .top-left {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  /* wrap both into a single visual row */
+  .top-phone {
+    margin-right: 8px;   /* 🔑 spacing between phone & mail */
+  }
+
+  /* force both into row 1 */
+  .top-phone,
+  .top-left {
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  /* ===== SECOND LINE: SOCIALS ===== */
+  .top-right {
+    grid-row: 2;
+    display: flex !important;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* icon size like reference */
+  .top-bar i {
+    font-size: 12px;
+  }
+}
+/* ==================================================
+   TOP BAR – MOBILE FINAL ALIGNMENT (EXACT CONTROL)
+================================================== */
+@media (max-width: 768px) {
+
+  /* Base top bar */
+  .top-bar {
+    display: grid !important;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+
+    padding: 4px 8px !important;
+    font-size: 12px !important;
+  }
+
+  /* PHONE → LEFT CORNER (row 1, col 1) */
+  .top-phone {
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: start;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+
+  /* EMAIL → CENTER (row 1, col 2) */
+  .top-left {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: center;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+
+  /* OPTIONAL: make email text slightly smaller if needed */
+  .top-left span {
+    font-size: 12px;
+  }
+
+  /* SOCIALS → SECOND LINE (centered) */
+  .top-right {
+    grid-row: 2;
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  /* Icon sizing */
+  .top-bar i {
+    font-size: 12px;
+  }
+}
+/* =========================================
+   TOP BAR – MAIL ICON INLINE (MOBILE ONLY)
+========================================= */
+@media (max-width: 768px) {
+
+  /* Email container */
+  .top-left {
+    display: inline-flex !important;   /* 🔑 force inline */
+    flex-direction: row !important;    /* 🔑 prevent stacking */
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+
+  /* Email icon */
+  .top-left i {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  /* Email text */
+  .top-left span {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+  }
+}
+/* ===============================
+   VISUALLY SCALE FIRST LOGO ONLY
+   (NAVBAR SIZE WILL NOT CHANGE)
+================================ */
+
+.left-logo img {
+  transform: scale(1.25);   /* 👈 increase logo size */
+  transform-origin: left center;
+}
+/* Increase ONLY the width of the first logo */
+.left-logo img {
+  width: 70px;     /* 👈 increase width only */
+  height: auto;     /* 🔑 do NOT touch height */
+  object-fit: contain;
+}
+/* Increase ONLY the width of the center logo */
+.center-logo img {
+  width: 170px;     /* 👈 adjust as you like */
+  height: auto;     /* 🔑 keeps navbar height same */
+  object-fit: contain;
+}
+/* =========================================
+   NAVBAR LOGO SPACING – RESPONSIVE FIX
+   (PASTE AT END)
+========================================= */
+
+/* Ensure navbar uses flex properly */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo wrappers */
+.left-logo,
+.center-logo {
+  display: flex;
+  align-items: center;
+}
+
+/* 🔑 ADD SPACE BETWEEN LOGOS */
+.left-logo {
+  margin-right: 16px;   /* adjust if needed */
+}
+
+/* Mobile fine-tuning */
+@media (max-width: 768px) {
+  .left-logo {
+    margin-right: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-logo {
+    margin-right: 12px;
+  }
+}
+/* ===============================
+   MOBILE DRAWER (RESPONSIVE)
+================================ */
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 2000;
+}
+
+.mobile-drawer.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer-panel {
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #fff;
+  padding: 26px;
+  transform: translateX(-100%);
+  transition: 0.3s ease;
+}
+
+.mobile-drawer.active .drawer-panel {
+  transform: translateX(0);
+}
+
+.drawer-close {
+  border: none;
+  background: none;
+  font-size: 22px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.drawer-panel a,
+.drawer-panel span {
+  display: block;
+  padding: 12px 0;
+  font-size: 16px;
+  color: #222;
+  text-decoration: none;
+}
+
+.drawer-panel a:hover {
+  color: #ff8c1a;
+}
+
+/* Events sub menu */
+.drawer-sub span {
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.drawer-sub a {
+  padding-left: 14px;
+  font-size: 15px;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+/* ===============================
+   FORCE MOBILE MENU BUTTON
+   (FINAL OVERRIDE)
+================================ */
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: block !important;   /* 🔑 FORCE SHOW */
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none !important;    /* hide desktop menu */
+  }
+}
+/* ===============================
+   MOBILE DRAWER EVENTS DROPDOWN
+================================ */
+
+/* Toggle button */
+.drawer-sub-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Arrow rotation */
+.drawer-sub-toggle .arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Submenu hidden by default */
+.drawer-sub-menu {
+  display: none;
+  padding-left: 14px;
+}
+
+/* Open state */
+.drawer-sub.open .drawer-sub-menu {
+  display: block;
+}
+
+.drawer-sub.open .drawer-sub-toggle .arrow {
+  transform: rotate(180deg);
+}
+
+/* Submenu links */
+.drawer-sub-menu a {
+  display: block;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #444;
+}
+/* ===============================
+   NAV TOGGLE – FINAL FIX
+=============================== */
+@media (max-width: 768px) {
+
+  /* Ensure navbar layout stays correct */
+  .navbar {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Force hamburger menu to show */
+  .nav-toggle {
+    display: block !important;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 3000;
+  }
+}
+
+/* ===============================
+   MOBILE DRAWER – RIGHT SLIDE FIX
+=============================== */
+.drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #fff;
+  padding: 26px;
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-drawer.active .drawer-panel {
+  transform: translateX(0);
+}
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 6%;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LOGOS */
+.left-logo img {
+  width: 90px;
+  height: auto;
+}
+
+.center-logo img {
+  width: 170px;
+  height: auto;
+}
+
+/* DESKTOP MENU */
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #fff;
+  min-width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.15);
+  display: none;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+/* HAMBURGER */
+.nav-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+}
+
+/* ===============================
+   HAMBURGER BUTTON
+=============================== */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #222;
+  z-index: 5000;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block !important;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+}
+
+/* ===============================
+   MOBILE DRAWER OVERLAY
+=============================== */
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 4000;
+}
+
+.mobile-drawer.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===============================
+   DRAWER PANEL (RIGHT SLIDE)
+=============================== */
+.drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+
+  background: #ffffff;
+  padding: 26px;
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-drawer.active .drawer-panel {
+  transform: translateX(0);
+}
+
+/* ===============================
+   CLOSE BUTTON
+=============================== */
+.drawer-close {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   DRAWER LINKS
+=============================== */
+.drawer-panel a {
+  display: block;
+  padding: 12px 0;
+  font-size: 16px;
+  color: #222;
+  text-decoration: none;
+}
+
+.drawer-panel a:hover {
+  color: #ff8c1a;
+}
+
+/* ===============================
+   EVENTS DROPDOWN (MOBILE)
+=============================== */
+.drawer-sub {
+  margin-top: 10px;
+}
+
+.drawer-sub-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.drawer-sub-toggle .arrow {
+  transition: transform 0.3s ease;
+}
+
+/* hidden by default */
+.drawer-sub-menu {
+  display: none;
+  padding-left: 14px;
+}
+
+/* open state */
+.drawer-sub.open .drawer-sub-menu {
+  display: block;
+}
+
+.drawer-sub.open .drawer-sub-toggle .arrow {
+  transform: rotate(180deg);
+}
+
+.drawer-sub-menu a {
+  font-size: 15px;
+  padding: 8px 0;
+  color: #444;
+}
+/* ===============================
+   MOBILE HAMBURGER
+=============================== */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #222;
+  z-index: 5000;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+/* ===============================
+   MOBILE DRAWER OVERLAY
+=============================== */
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 4000;
+}
+
+.mobile-drawer.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===============================
+   DRAWER PANEL (RIGHT SLIDE)
+=============================== */
+.drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #ffffff;
+  padding: 26px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-drawer.active .drawer-panel {
+  transform: translateX(0);
+}
+
+/* ===============================
+   DRAWER CONTENT
+=============================== */
+.drawer-close {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.drawer-panel a {
+  display: block;
+  padding: 12px 0;
+  font-size: 16px;
+  color: #222;
+  text-decoration: none;
+}
+
+.drawer-panel a:hover {
+  color: #ff8c1a;
+}
+
+/* ===============================
+   EVENTS DROPDOWN (MOBILE)
+=============================== */
+.drawer-sub-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.drawer-sub-menu {
+  display: none;
+  padding-left: 14px;
+}
+
+.drawer-sub.open .drawer-sub-menu {
+  display: block;
+}
+
+.drawer-sub.open .arrow {
+  transform: rotate(180deg);
+}
+.left-logo img {
+  transform: scale(1.25);   /* 👈 increase logo size */
+  transform-origin: left center;
+}
+/* Increase ONLY the width of the first logo */
+.left-logo img {
+  width: 80px;     /* 👈 increase width only */
+  height: auto;     /* 🔑 do NOT touch height */
+  object-fit: contain;
+}

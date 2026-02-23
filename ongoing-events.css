@@ -1,0 +1,82 @@
+/* ================================
+   ONGOING EVENTS – ORANGE THEME
+================================ */
+
+.events-section {
+  padding: 60px 6% 70px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.events-intro {
+  max-width: 700px;
+  margin: 0 auto 45px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* GRID */
+.events-grid {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* CARD */
+.event-card {
+  position: relative;
+  background: #fdf7f2;               /* soft orange tint */
+  border-left: 6px solid #ff8c1a;    /* ORANGE accent */
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+/* LIVE BADGE (ORANGE ONLY) */
+.live-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ff8c1a;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* CONTENT */
+.event-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.event-meta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.event-desc {
+  font-size: 15.5px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .event-card {
+    padding: 26px;
+  }
+
+  .live-badge {
+    top: 16px;
+    right: 16px;
+    font-size: 11.5px;
+    padding: 5px 12px;
+  }
+}

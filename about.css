@@ -1,0 +1,502 @@
+/* ===============================
+   GLOBAL
+================================ */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f9fafc;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 32px;
+}
+
+/* ===============================
+   FOUNDERS SECTION
+================================ */
+.founder-section {
+  padding: 70px 6% 10px;
+  background: #f8f9fb;
+  margin-bottom: 30px;
+}
+
+.founder-main {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.founder-image img {
+  width: 100%;
+  max-width: 520px;
+  max-height: 380px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.founder-content h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  color: #1f2a44;
+}
+
+.founder-content p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+  text-align: justify;
+}
+
+.founder-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.f-thumb {
+  width: 130px;
+  cursor: pointer;
+  opacity: 0.65;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.f-thumb img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 14px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.f-thumb span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.f-thumb.active {
+  opacity: 1;
+  transform: translateY(-6px);
+}
+
+.f-thumb.active img {
+  outline: 3px solid #ff8c1a;
+}
+
+/* ===============================
+   VISION & MISSION – EDITORIAL
+================================ */
+.vm-editorial {
+  padding: 40px 20px 30px;
+  background: linear-gradient(180deg, #ffffff, #fafafa);
+}
+
+.vm-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.vm-intro .vm-eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ff8a1f;
+  font-weight: 600;
+}
+
+.vm-intro h2 {
+  font-size: 44px;
+  margin: 18px 0;
+  line-height: 1.2;
+}
+
+.vm-intro p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 420px;
+}
+
+.vm-content {
+  position: relative;
+  padding-left: 40px;
+}
+
+.vm-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff8a1f, #ffb36b);
+}
+
+.vm-block h3 {
+  font-size: 28px;
+  margin: 8px 0 12px;
+}
+
+.vm-block p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.vm-divider {
+  height: 1px;
+  background: linear-gradient(to right, #eee, transparent);
+  margin: 32px 0;
+}
+
+/* ===============================
+   CORE VALUES (ACCORDION)
+================================ */
+.core-values {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 6% 30px;
+}
+
+.policy-box {
+  margin-bottom: 16px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.policy-header {
+  background: linear-gradient(135deg, #ff8c1a, #ffb066);
+  padding: 18px 26px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.policy-body {
+  background: #fff;
+  padding: 22px;
+  display: none;
+}
+
+.policy-box.active .policy-body {
+  display: block;
+}
+
+/* ===============================
+   OBJECTIVES – SIGNATURE STYLE
+================================ */
+.objectives-signature {
+  padding: 40px 20px 100px;
+  background: linear-gradient(180deg, #ffffff, #fafafa);
+}
+
+.objectives-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 70px;
+}
+
+.objectives-intro .eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ff8a1f;
+  font-weight: 600;
+}
+
+.objectives-intro h2 {
+  font-size: 46px;
+  margin: 14px 0 18px;
+}
+
+.objectives-intro p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 420px;
+}
+
+.objectives-list {
+  position: relative;
+  padding-left: 40px;
+}
+
+.objectives-list::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff8a1f, #ffb36b);
+}
+
+.objective-row {
+  display: flex;
+  gap: 28px;
+  padding: 32px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.objective-row:last-child {
+  border-bottom: none;
+}
+
+.objective-index {
+  font-size: 34px;
+  font-weight: 600;
+  color: rgba(255,138,31,0.55);
+  min-width: 50px;
+  transition: color 0.3s ease;
+}
+
+.objective-row:hover .objective-index {
+  color: rgba(255,138,31,0.8);
+}
+
+.objective-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.objective-content p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .founder-main,
+  .vm-wrapper,
+  .objectives-container {
+    grid-template-columns: 1fr;
+  }
+
+  .vm-content,
+  .objectives-list {
+    padding-left: 20px;
+  }
+
+  .vm-intro h2,
+  .objectives-intro h2 {
+    font-size: 36px;
+  }
+}
+/* ===============================
+   LOCATION & PROFILE – NARRATIVE
+================================ */
+.lp-narrative {
+  padding: 110px 20px;
+  background: linear-gradient(180deg, #ffffff, #fafafa);
+}
+
+.lp-narrative-wrap {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+/* Row layout */
+.lp-narrative-row {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 70px;
+  align-items: flex-start;
+}
+
+.lp-narrative-row.reverse {
+  grid-template-columns: 1.3fr 0.7fr;
+}
+
+
+/* Story */
+.lp-story .lp-eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ff8a1f;
+  font-weight: 600;
+}
+
+.lp-story h2 {
+  font-size: 38px;
+  margin: 16px 0 22px;
+  line-height: 1.25;
+}
+
+.lp-story p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #444;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* Fact strip */
+.lp-facts {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.lp-facts.soft .lp-fact {
+  background: #fffdf9;
+}
+
+.lp-fact {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.08);
+}
+
+.lp-fact span {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ff8a1f;
+}
+
+.lp-fact small {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .lp-narrative-wrap {
+    gap: 80px;
+  }
+
+  .lp-narrative-row,
+  .lp-narrative-row.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .lp-facts {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .lp-fact {
+    flex: 1 1 45%;
+  }
+
+  .lp-story h2 {
+    font-size: 32px;
+  }
+}
+/* Reduce gap AFTER Location / Profile section */
+.lp-narrative {
+  padding-bottom: 40px;   /* was ~110px */
+}
+
+/* Reduce gap BEFORE Objectives section */
+.objectives-signature {
+  padding-top: 30px;      /* was ~40–60px */
+  margin-top: 0;
+}
+/* Reduce gap BETWEEN Location section and Objectives section */
+.lp-narrative {
+  padding-bottom: 30px !important;
+}
+
+.objectives-signature {
+  padding-top: 30px !important;
+  margin-top: 0 !important;
+}
+/* Eyebrow (Location / Organizational Profile) */
+.lp-eyebrow {
+  display: inline-block;
+  font-size: 20px;          /* bigger & visible */
+  font-weight: 600;
+  letter-spacing: 1.5px;    /* refined, not shouty */
+  text-transform: uppercase;
+  color: #ff8a1f;
+  margin-bottom: 12px;
+}
+
+
+/* Main heading */
+.lp-story h2 {
+  font-size: 44px;          /* BIG + premium */
+  font-weight: 600;
+  line-height: 1.2;
+  color: #222;
+  margin-bottom: 24px;
+  max-width: 700px;
+  position: relative;
+}
+
+/* Subtle underline accent */
+.lp-story h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin-top: 14px;
+  background: linear-gradient(90deg, #ff8a1f, #ffb36b);
+  border-radius: 2px;
+}
+/* Reduce padding inside LOCATION section */
+.lp-narrative {
+  padding-top: 60px !important;     /* was ~110px */
+  padding-bottom: 30px !important;  /* tighten bottom */
+}
+
+/* Reduce space BETWEEN Location and Objectives */
+.objectives-signature {
+  padding-top: 30px !important;     /* was larger */
+  margin-top: 0 !important;
+}
+
+/* Safety: remove accidental margin stacking */
+.lp-narrative + .objectives-signature {
+  margin-top: 0 !important;
+}
+/* Reduce padding inside LOCATION content */
+.lp-narrative-row:first-child .lp-story {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* Increase size of LOCATION & ORGANIZATIONAL PROFILE headings */
+.lp-story .lp-eyebrow {
+  font-size: 20px;      /* increase size */
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+/* Reduce size of main headings under Location & Organization */
+.lp-story h2 {
+  font-size: 38px;   /* was ~44px */
+}
+/* Reduce space BETWEEN Location and Objectives */
+.lp-narrative {
+  padding-bottom: 10px;
+}
+
+.objectives-signature {
+  padding-top: 10px;
+}

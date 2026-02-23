@@ -1,0 +1,521 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fb;
+}
+
+/* SECTION */
+.library-section {
+  padding: 70px 6%;
+}
+
+/* MAIN TOP */
+.library-main {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* IMAGE */
+.library-image img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+
+.library-image img:hover {
+  transform: scale(1.02);
+}
+
+/* CONTENT */
+.library-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.library-content p {
+  font-size: 15.8px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.library-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.library-content li {
+  font-size: 14.5px;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   THUMBNAILS – CENTERED ROW
+   ========================= */
+
+.library-thumbs {
+  display: flex;
+  justify-content: center;      /* ✅ center thumbnails */
+  align-items: center;
+  gap: 24px;
+  margin-top: 35px;
+  flex-wrap: nowrap;            /* single row */
+}
+
+/* Individual thumbnail */
+.thumb {
+  width: 160px;                 /* ✅ equal width */
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.8;
+  flex: 0 0 auto;               /* prevent resizing */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Thumbnail image */
+.thumb img {
+  width: 100%;
+  height: 100px;                /* ✅ equal height */
+  object-fit: cover;            /* no distortion */
+  border-radius: 14px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  margin-bottom: 8px;
+}
+
+/* Label */
+.thumb span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Active thumbnail */
+.thumb.active {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+.thumb.active img {
+  outline: 3px solid #ff8c1a;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .library-main {
+    grid-template-columns: 1fr;
+  }
+}
+ /* FORCE SOCIAL ICONS VISIBLE IN TOP BAR */
+.top-bar .top-right a,
+.top-bar .top-right i {
+  color: #ffffff !important;
+}
+
+.library-content {
+  max-width: 620px;
+}
+
+.library-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+
+.library-text {
+  font-size: 15.8px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+/* RIGHT CONTENT CONTAINER */
+.library-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+/* MAIN TITLE */
+.library-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1f2a44;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+
+/* DESCRIPTION TEXT */
+.library-text,
+#mainDesc {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+  text-align: justify;          /* KEY: professional alignment */
+  max-width: 95%;
+}
+
+/* Improve paragraph spacing when using <br><br> */
+#mainDesc br + br {
+  content: "";
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Optional: subtle left accent for academic feel */
+.library-content {
+  border-left: 3px solid #f0f0f0;
+}
+
+/* Responsive refinement */
+@media (max-width: 768px) {
+  .library-content {
+    padding: 20px 10px;
+  }
+
+  .library-content h2 {
+    font-size: 24px;
+  }
+
+  #mainDesc {
+    font-size: 15px;
+  }
+}
+ .library-thumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 35px;
+
+  transform: translateX(40px);  /* 👈 move thumbnails right */
+}
+/* ===============================
+   COMMON SECTION STYLES
+================================ */
+.section-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.section-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  max-width: 900px;
+  margin-bottom: 30px;
+}
+
+/* ===============================
+   LIBRARY COMMITTEE
+================================ */
+.library-committee {
+  padding: 80px 6%;
+}
+
+.committee-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.committee-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 200px;
+  padding: 18px 24px;
+  border-bottom: 1px solid #eee;
+  font-size: 15.5px;
+}
+
+.committee-row.header {
+  background: linear-gradient(135deg, #ff8c1a, #ffb066);
+  color: #fff;
+  font-weight: 600;
+}
+
+.committee-row:last-child {
+  border-bottom: none;
+}
+
+.committee-row span small {
+  display: block;
+  font-size: 13px;
+  color: #777;
+}
+
+/* ===============================
+   LIBRARY POLICY
+================================ */
+.library-policy {
+  padding: 80px 6%;
+  background: #f8f9fb;
+}
+
+.policy-accordion {
+  max-width: 900px;
+}
+
+.policy-item {
+  width: 100%;
+  background: linear-gradient(135deg, #ff8c1a, #ffb066);
+  color: #fff;
+  border: none;
+  padding: 18px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.policy-content {
+  display: none;
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  margin-bottom: 18px;
+}
+
+.policy-content p {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #444;
+}
+/* Reduce gap between thumbnails and committee section */
+.library-section {
+  padding-bottom: 2px;   /* reduce from default */
+}
+
+.library-committee {
+  padding-top: 2px;      /* reduce top space */
+}
+ /* ===============================
+   LIBRARY POLICY – FULL
+================================ */
+.library-policy-full {
+  padding: 60px 6%;
+}
+
+.policy-box {
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.policy-header {
+  background: linear-gradient(135deg, #ff8c1a, #ffb066);
+  color: #fff;
+  padding: 18px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.policy-body {
+  background: #fff;
+  padding: 22px 26px;
+  display: none;
+}
+
+.policy-body p {
+  font-size: 15.5px;
+  margin-bottom: 10px;
+}
+
+.policy-body ul {
+  padding-left: 20px;
+}
+
+.policy-body li {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 6px;
+}
+
+/* OPEN STATE */
+.policy-box.active .policy-body {
+  display: block;
+}
+ /* ===============================
+   LIBRARY GUIDELINES – PREMIUM
+================================ */
+.library-guidelines {
+  padding: 40px 6%;
+}
+
+/* Typography */
+.guidelines-body p {
+  font-size: 15.5px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.guidelines-body ul {
+  margin: 8px 0 14px 0;
+  padding-left: 18px;
+}
+
+.guidelines-body li {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+/* Section headings inside content */
+.guidelines-body p strong {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-size: 15.5px;
+  color: #111;
+}
+
+/* Reduce space between Guidelines and Committee */
+.library-guidelines {
+  padding-bottom: 6px;
+  margin-bottom: 0;
+}
+
+.library-committee {
+  padding-top: 6px;
+  margin-top: 0;
+}
+
+/* 🔧 REMOVE EXTRA GAP BEFORE GUIDELINES */
+.library-guidelines {
+  padding-top: 10px !important;
+  margin-top: 0 !important;
+}
+/* 🔧 REMOVE DEFAULT HEADING GAP */
+.library-guidelines .section-title {
+  margin-top: 0 !important;
+}
+/* ===============================
+   LIBRARY HERO – WITH IMAGE
+================================ */
+.library-hero {
+  padding: 80px 6% 50px;
+  background: #ffffff;
+}
+
+.library-hero-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+}
+
+/* Left accent */
+.library-hero-text {
+  position: relative;
+  padding-left: 28px;
+}
+
+.library-hero-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 120px;
+  background: #ff8c1a;
+  border-radius: 2px;
+}
+
+/* Eyebrow */
+.library-eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ff8c1a;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Title */
+.library-title {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 600;
+  color: #1f2a44;
+  margin-bottom: 22px;
+  line-height: 1.25;
+}
+
+/* Text */
+.library-intro {
+  font-size: 16.5px;
+  line-height: 1.85;
+  color: #444;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* Highlights */
+.library-highlights {
+  margin-top: 26px;
+  padding-left: 18px;
+}
+
+.library-highlights li {
+  font-size: 15.5px;
+  margin-bottom: 6px;
+  color: #222;
+  position: relative;
+}
+
+.library-highlights li::before {
+  content: "•";
+  color: #ff8c1a;
+  position: absolute;
+  left: -14px;
+}
+
+/* IMAGE STYLE */
+.library-hero-image img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .library-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .library-title {
+    font-size: 30px;
+  }
+
+  .library-hero-text::before {
+    height: 90px;
+  }
+}
+
+

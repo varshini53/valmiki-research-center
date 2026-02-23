@@ -1,0 +1,122 @@
+/* ================================
+   COMPLETED EVENTS – ORANGE THEME
+================================ */
+
+.events-section {
+  padding: 60px 6% 70px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.events-intro {
+  max-width: 720px;
+  margin: 0 auto 45px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* GRID */
+.events-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  gap: 30px;
+}
+
+/* CARD */
+.event-card {
+  display: flex;
+  gap: 30px;
+  background: #fdf7f2; /* soft orange tint */
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+  align-items: flex-start;
+}
+
+/* DATE BLOCK */
+.event-date {
+  min-width: 70px;
+  text-align: center;
+  background: #ff8c1a;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 10px 0;
+}
+
+.event-date span {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.event-date strong {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* CONTENT */
+.event-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.event-meta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.event-desc {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* STATUS BADGE */
+.status-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff8c1a;
+  border: 1px solid #ff8c1a;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .event-card {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .event-date {
+    width: fit-content;
+    padding: 8px 14px;
+  }
+}
+/* ================================
+   HEADING GAP FIX – FINAL OVERRIDE
+================================ */
+
+/* Remove large top & bottom gap */
+.events-section .section-heading {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+}
+
+/* Control underline spacing */
+.events-section .section-heading::after {
+  margin: 8px auto 6px !important;
+}
+
+/* Paragraph comes immediately after heading */
+.events-section .events-intro {
+  margin-top: 0 !important;
+  margin-bottom: 40px;
+}

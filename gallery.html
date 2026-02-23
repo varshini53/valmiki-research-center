@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery | Valmiki Research Centre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+  <!-- Gallery CSS -->
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+  <!-- ================= GALLERY ================= -->
+  <section class="gallery-section">
+
+    <h2 class="section-heading">Gallery</h2>
+    <p class="gallery-intro">
+      A curated visual archive of conferences, conclaves, and cultural events
+      organised by Valmiki Research Centre.
+    </p>
+
+    <!-- EVENT SELECTOR -->
+    <div class="gallery-events">
+      <button class="event-btn active" data-event="shankharavam">
+        Sri Ramayana Shankharavam
+      </button>
+      <button class="event-btn" data-event="scholars">
+        Ramayana Scholars Meet
+      </button>
+      <button class="event-btn" data-event="cultural">
+        Cultural Discourses
+      </button>
+    </div>
+
+    <!-- PHOTO GRID -->
+    <div class="photo-grid" id="photoGrid"></div>
+
+  </section>
+
+  <!-- Gallery JS -->
+   <div id="footer-placeholder"></div>
+  
+
+  <script src="gallery.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
