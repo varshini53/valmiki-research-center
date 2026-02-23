@@ -2582,3 +2582,52 @@ h2.section-heading::after {
   height: auto;     /* 🔑 do NOT touch height */
   object-fit: contain;
 }
+/* =========================================
+   HERO – FORCE CENTERED & PROFESSIONAL (FIX)
+========================================= */
+
+/* HARD OVERRIDE */
+.hero {
+  background-position: center center !important;
+  background-size: cover !important;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+  .hero {
+    height: auto !important;
+    min-height: 60vh !important;     /* 🔑 reduced height */
+    padding: 70px 0 !important;
+    background-position: center center !important;
+  }
+
+  .hero-content {
+    padding: 0 16px !important;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    max-width: 95% !important;
+    margin: 0 auto 20px !important;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 480px) {
+
+  .hero {
+    min-height: 55vh !important;
+    padding: 60px 0 !important;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem !important;
+  }
+}
