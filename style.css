@@ -2658,38 +2658,4 @@ h2.section-heading::after {
 .drawer-close:hover {
   color: #ff8c1a;
 }
-/* =====================================
-   COURSES SECTION – MATCH HEADING FONT
-===================================== */
 
-/* Section heading */
-.courses-section .section-heading {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  color: #222;
-}
-
-/* Individual course titles */
-.courses-section h4 {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  color: #222;
-}
-/* =====================================
-   FORCE COURSES FONT – FINAL OVERRIDE
-===================================== */
-
-/* "Our Courses" heading */
-section.courses-section > h2.section-heading {
-  font-family: "Playfair Display", serif !important;
-  font-weight: 600 !important;
-  color: #222 !important;
-}
-
-/* Course card titles */
-section.courses-section .course-box h4 {
-  font-family: "Playfair Display", serif !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.3px;
-  color: #222 !important;
-}
